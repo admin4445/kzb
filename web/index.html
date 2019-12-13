@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/swiper.min.js"></script>
+      
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+
+        }
+       
+        #contrain{
+            background: rgb(255, 243, 230);
+        }
+        .header .head1{
+            width: 100%;
+            height: 160px;
+        }
+        .header .head1 img{
+            width:100%;
+            height: 160px;
+        }
+        .nav {
+            background-image: url('img/index/navbg.png');
+           
+        }
+        .nav ul{
+            display: flex;
+            width: 955px;
+            margin: 0 auto;
+        }
+
+        .nav ul li{
+            list-style: none;
+            color: rgb(255, 250, 189);
+            font-family: "宋体";
+            font-size:21px;
+            padding: 10px 0px;
+            margin: 0 auto;
+            font-weight:bolder;
+            width: 100%;
+            height: 100%;
+           
+        }
+        .codeinfo{
+            width: 955px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(255, 240, 209);
+        }
+        .codeinfo ul li{
+            list-style: none;
+            line-height: 50px;
+             padding: 0 5px;
+             font-family: "微软雅黑";
+             font-weight: bolder;
+        }
+        .codeinfo ul li img{
+          width: 45px;
+          height: 25px;
+          margin-top: 14px;
+          margin-left: 10px;
+        }
+        .codeinfo ul {
+            display: flex;
+            
+        }
+        .banner{
+            width: 955px;
+            height: 369px;
+            margin: 0 auto;
+           
+        }
+        .swiper-container{
+           
+            width:100%;
+           
+        }
+        .swiper-container img{
+            width: 100%;
+        }
+        .bm{
+            width: 955px;
+            margin: 0 auto;
+            padding:  0 10px;
+        }
+        .bm ul{
+            display: flex;
+            margin: 0 auto;
+            
+        }
+        .bm ul li{
+            list-style: none;
+            padding-right: 60px;
+            color: rgb(119, 99, 93);
+            font-family: "微软雅黑";
+            font-size: 14.72px;
+            line-height: 25px;
+           
+        }
+        .bm ul li:nth-child(2) img{
+           padding: 0 20px;
+        }
+        .bm ul li:nth-child(3) img{
+            margin-top:10px;
+        }
+        .kangmeu{
+            width: 955px;
+            margin: 0 auto;
+            padding: 5px 0px;
+            position: relative;
+            margin-bottom: 50px;
+        }
+        .kangmeu ul{
+            display: flex;
+        }
+        .kangmeu ul li{
+            list-style: none;
+            margin-left:30px;
+            padding: 0 10px;
+            
+        }
+        .kangmeu .rightbtn  img{
+              position: absolute;
+              left: 925px;
+              top:105px
+        }
+        .kangmeu .leftbtn  img{
+              position: absolute;
+              left: 5px;
+              top:105px
+        }
+        
+    </style>
+</head>
+<body>
+   <div id="contrain">
+        <!-- 头部-->
+        <div class="header" >
+            <div class="head1"><img src="img/index/header2.png" alt="" ></div> 
+            <div class="nav">
+                <ul >
+                    <li><a href="index.html">首页 </a></li>
+                    <li><a href="home.html">大赛简介</a></li>
+                    <li><a href="about.html">大赛指南</a></li>
+                    <li>门店风采</li>
+                    <li>大赛快讯</li>
+                    <li>精彩图锦</li>
+                    <li>专家阵容</li>
+                    <li>康美药业</li>
+                </ul>
+                
+            </div>
+        </div>
+        <!--通告-->
+        <div class="codeinfo">
+            
+             <ul>
+                 <li><img src="img/index/code_12.png" alt=""></li>
+                 <li style="color: rgb(248,146,53);">大赛公告:</li>
+                 <li>6020 -毕月红(大连海王星辰医药有限公司鹏辉点店)</li>
+                 <li>6090 -小花(福州大王药店)</li>
+                 <li>6020 -付大生(湖南大药房)</li>
+                 <li></li>
+             </ul>
+        </div>
+        <!--banner -->
+        <!-- Swiper -->
+        <div class="banner"> 
+                <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/index/banner1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/index/banner1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/index/banner1.png" alt=""></div>
+                        <div class="swiper-slide"><img src="img/index/banner1.png" alt=""></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+        </div>
+        
+        <!--报名方式-->
+        <div class="bm">
+            <img src="img/index/bm.png" alt="">
+            <ul>
+                    <li style="width:300px">
+                        <p style="text-indent:2em;">1.康美药业OTC队伍邀请参加大赛;</p>
+                        <p style="text-indent:2em;">2.点击本官网 "马上报名" 直接参与</p>
+                        <p style="text-indent:2em;">3.报答报名热线：<br/></p>
+                        <p style="text-indent:4em;">020-38390615-8047 奈小姐</p>
+                        <p style="text-indent:4em;">020-38300615-9890 菜小姐</p>
+    
+                    </li>
+                    <li style="display: flex;">
+                        <img src="img/index/gzwx.png" alt="">
+                        <img src="img/index/xinlan.png" alt="">
+                    </li>
+                    <li  style="width: 150px;">
+                       
+                        <div style="display: flex;margin-left: 30px;">
+                                <img src="img/index/coffice.png" ><div style="display: inline;margin-top:11px;margin-left: 5px;">马上报名</div>
+                        </div>
+                        <div style="display: flex; margin-top: 15px;margin-left: 30px;" >
+                               
+                                <img src="img/index/liping.png" > <div style="display: inline;margin-top:11px;margin-left: 5px;">立即登录</div>
+                        </div>
+                     
+                    </li>
+                </ul>
+        </div>
+
+        <!--康美中药养身馆-->
+        <div class="kangmeu">
+                <img src="img/index/ys.png" alt="" >
+                <ul  style="margin-top: 15px;">
+                    <li><img src="img/index/23.png" ></li>
+                    <li><img src="img/index/24.png" ></li>
+                    <li><img src="img/index/25.png" ></li>
+                    <li><img src="img/index/24.png" ></li>
+                    <li><img src="img/index/25.png" ></li>
+                   
+                  
+                </ul>
+                <a href="" class="leftbtn"><img src="img/index/left.btn.png" alt=""></a>
+                <a href="" class="rightbtn"><img src="img/index/rightbtn.png" alt=""></a>
+
+        </div>
+
+        <!--footer
+        <div class="footer" >
+            <div>
+                <h2 style="margin-top: 35px;">联合主办</h2>
+            </div>
+            <div> 
+                <ul>
+                    <li><img src="img/index/logo.png" alt="" style="margin-top:15px;width: 80px;height: 50px;"></li>
+                    <li>
+                            <p>
+                                <span style="font-size: 20px;font-weight: bolder;">康美药业股份有限公司</span><br />
+                               
+                               <span style="font-size: 8px;">KANGM EIY ENYOU ANGONGSI</span> 
+                            </p>  
+                        </li>
+                 </ul>
+            </div>
+            <div>
+                <p style="margin-top:30px;"><span style="font-size: 27px;font-weight: bolder;color:rgb(185, 0,7);font-family: '微软雅黑';">第一药店</span><br /></p>
+            </div>
+            <div>
+                <ul>
+                    <li><h3 style="margin-top:22px;">承办:</h2> &nbsp;</li>
+                    <li>
+                            <p>
+                                    <span style="font-size: 30px;font-weight: bolder;"><span style="color:rgb(185, 0, 7)">第一药店</span> <span style="color: rgb(49, 126, 156);">管理学院 </span></span><br />
+                                   
+                                  
+                                </p>  
+                    </li>
+                </ul>
+            </div>
+           
+        </div>
+        -->
+        <div style="width: 1100px;margin: 0 auto;height: 33px;">
+            <p style="text-align: center;font-weight: bolder;color:rgb(122, 75, 68)">Copright @ 2012 www.dyyy.com ALL Rights  Rsesrved  广州中康咨询 版权所有</p>
+        </div>
+        
+
+         
+
+   </div>
+   <script>
+        var swiper = new Swiper('.swiper-container', {
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+</body>
+</html>
