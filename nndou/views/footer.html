@@ -1,0 +1,32 @@
+<footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 footer-left">
+            <img src="<?php echo $footerinfo['conf_img'] ?>" alt="">
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <ul class="footer-nav">
+
+              <?php  foreach($navinfo as $val){ ?>
+               <?php if(basename($_SERVER['SCRIPT_FILENAME'])==$val['nnd_url']){ ?>
+                  <?php }else{ ?>
+                    <li><a href="<?php echo $val['nnd_url'] ?>"><?php echo $val['nav_name'] ?></a></li>
+                  <?php }?>
+              <?php }?>
+            </ul>
+            <div class="footer-contacts">
+              <p><img src="/static/images/public/footer-locate.png" alt=""><?php echo $footerinfo['conf_addr']; ?></p>
+              <p><img src="/static/images/public/footer-locate.png" alt=""><?php echo $footerinfo['conf_copy']; ?></p>
+              <p class="info"><?php echo $footerinfo['conf_bean'] ?></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </footer>
+   
+    
+    
+  </body>
+</html>

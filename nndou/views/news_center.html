@@ -1,0 +1,96 @@
+
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    
+    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>news.css">
+    <section class="banner">
+       <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../static/images/public/banner2.jpg">
+          </div>
+      </div>       
+    </section>
+  <section class="news">
+    <div class="container">
+      <div class="row">
+        <div class="location col-md-11 col-md-offset-1 col-md-11 col-md-offset-1">
+          <p>当前位置：<span><?php echo $pathurl['nav_name']; ?></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+   <section class="title">
+      <div class="container titled">
+        <h1>我们的资讯中心</h1>
+        <h3>NEWS CENTER</h3>
+      </div>
+    </section>
+    <section class="news_list">
+      <div class="container">
+        <div class="row col-xs-12 col-sm-11 col-md-11 col-lg-11 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 news">
+          <ul>
+            <?php  foreach($info as $key=>$val){ ?>
+            <?php if($key%2==0){ ?>
+            <li class="img_left">
+              <img src="<?php echo $val['info_img'] ?>" alt="" class="img col-md-6 col-sm-12 col-xs-12">
+              <div class="content col-md-6 col-sm-12 col-xs-12" >
+                <h2><?php   echo date('m-d',$val['info_time']); ?></h2>
+                <h3><?php  echo date('Y',$val['info_time']);?></h3>
+                <h4><?php echo $val['info_title'] ?></h4>
+                <p><?php echo $val['info_content'] ?></p>
+                <a href="newsinfo.php?id=<?php echo $val['info_id'] ?>" class="<?php if($key==0){echo 'active';} ?>">MORE</a>
+              </div>
+            </li>
+
+            <?php }else{ ?>
+              <li class="img_right" >
+              <img src="<?php echo $val['info_img'] ?>" alt="" class="img col-md-6 col-sm-12 col-xs-12">
+              <div class="content col-md-6 col-sm-12 col-xs-12" style="padding-bottom: 20px">
+                <h2><?php   echo date('m-d',$val['info_time']); ?></h2>
+                <h3><?php  echo date('Y',$val['info_time']);?></h3>
+                <h4><?php echo $val['info_title'] ?></h4>
+                <p><?php echo $val['info_content'] ?></p>
+                <a href="newsinfo.php?id=<?php echo $val['info_id'] ?>">MORE</a>
+              </div>
+            </li>
+
+            <?php } ?>
+           <div class="clearfix"></div>
+            <?php  } ?>
+           
+          </ul>
+        </div>  
+        <div class="clearfix"></div>
+        <div class="kong64"></div>
+          <link rel="stylesheet" href="<?php echo CSS_DIR; ?>page.css">
+          <style> .page ul { display: flex;justify-content: center}</style>
+        <div class="row col-md-6 col-sm-8 col-xs-8 mypage ">
+
+          <?php echo $cc ?>
+          <!-- <ul>
+            <li class="prev"><</li>
+            <?php  for($i=1;$i<=$pagecount;$i++){ ?>
+              <li><a href="/newcenter.php?id=<?php echo $i;?>"><?php echo $i; ?></a></li>
+            <?php } ?>
+            <li class="next"><a href="/newcenter.php?id=<?php echo $pageqian;?>">></a></li>
+          </ul> -->
+        </div>
+        <div class="kong75"></div>
+      </div>
+    </section>
+    
+    
+    <script src="<?php echo JS_DIR; ?>vendor.js"></script>
+    <script src="<?php echo JS_DIR; ?>plugins.js"></script>
+    <!-- <script src="../static/scripts/public.js"></script> -->
+    <script src="../static/scripts/jquery-1.11.1.min.js"></script>
+    <script>
+      $('.news a').mouseover(function(){
+        $(this).addClass('active').parent().parent().siblings('li').find('a').removeClass('active');
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+
+<link rel="stylesheet" href="<?php echo CSS_DIR; ?>solute.css">
+<section class="solute-banner">
+    <div class="container">
+        <h1>互联网解决方案领导者</h1>
+        <h5>一路致力于为客户提供优质解决方案，高端网站开发，APP开发电子商务解决方案等，打造优质经典方案。</h5>
+        <img src="../static/images/solute/banner.png" alt="" class="img-responsive">
+    </div>
+</section>
+
+<section class="link">
+    <div class="container">
+        <ul>
+            <?php foreach($sertype as $val) { ?>
+            <li><a href="#<?php echo $val['serv_type_id'];?>" ><?php echo $val['serv_type_name'] ?></a></li>
+            <?php  }?>
+        </ul>
+    </div>
+</section>
+
+<section class="intro">
+    <?php foreach($sertypeinfos as $key=>$val){ ?>
+
+       <?php  if($key%2!=0){  ?>
+      <a name="<?php echo $val['serv_type']?>"></a>
+        <div class="intro-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="intro-details">
+                          <h3><?php echo $val['serv_name']?></h3>
+                          <h4><?php echo $val['serv_name1']?></h4>
+                          <p><?php  echo  $val['serv_desc']?></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="intro-img">
+                        <img src="<?php echo $val['serv_img']?>" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php }else{  ?>
+    <a name="<?php echo $val['serv_type']?>"></a>
+         <div class="intro-single">
+        <div class="container">
+            <div class="row">
+               
+                <div class="col-xs-12 col-sm-6">
+                    <div class="intro-img">
+                        <img src="<?php echo $val['serv_img']?>" alt="">
+                    </div>
+                </div>
+                 <div class="col-xs-12 col-sm-6">
+                    <div class="intro-details">
+                          <h3><?php echo $val['serv_name']?></h3>
+                          <h4><?php echo $val['serv_name1']?></h4>
+                          <p><?php  echo  $val['serv_desc']?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <?php } ?>
+    <?php } ?>
+
+        
+    
+</section>
+

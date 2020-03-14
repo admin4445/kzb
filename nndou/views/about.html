@@ -1,0 +1,79 @@
+
+     <link rel="stylesheet" href="<?php echo CSS_DIR; ?>about.css">
+    
+    
+    <section class="about">
+
+      <?php foreach($info as $key=>$val){ ?>
+      <?php if($key%2==0){ ?>
+      <div class="about-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="about-img">
+                        <img src="<?php echo $val['about_img'] ?>" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-5">
+                    <div class="about-details">
+                        <h3 ><?php echo $val['about_title'] ?></h3>
+                        <div class="class"></div>
+                        <h4><?php echo $val['about_title_en'] ?></h4>
+                        <p><?php echo $val['about_content'] ?></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+      <?php }else{?>
+
+      
+       <div class="about-single">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 ">
+                    <div class="about-details">
+                        <h3 ><?php echo $val['about_title'] ?></h3>
+                        <div class="class"></div>
+                        <h4><?php echo $val['about_title_en'] ?></h4>
+                        <p><?php echo $val['about_content'] ?></p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="about-img">
+                        <img src="<?php echo $val['about_img'] ?>" alt="">
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+      </div>
+      <?php } ?>
+
+      <?php } ?>
+      
+      
+    </section>
+     <section class="service">
+      <div class="container titled">
+        <div class="row">
+         <?php foreach($slogan as $val){ ?>
+          <a href="">
+            <div class="col-xs-12 col-sm-4">
+              <figure>
+                <div class="s-icon">
+                  <img src="<?php echo $val['slogan_thumb'] ?>" alt="">
+                </div>
+                <figcaption>
+                  <h3><?php echo $val['slogan_title'] ?></h3>
+                  <p><?php echo  $val ['slogan_desc'] ?></p>
+                </figcaption>
+              </figure>
+            </div>
+          </a>
+          <?php } ?>
+      </section>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+  
+
+
+    <link rel="stylesheet" href="<?php echo CSS_DIR; ?>index.css">
+    <section class="service">
+      <div class="container titled">
+        <h1>我们主打的顶级服务</h1>
+        <h3>OUR SERVICE</h3>
+        <div class="row">
+          <?php  foreach($sertype as $key=> $val) {?>
+
+             <?php if($key !=0 && $key %3 ==0){ echo '<div class="clearfix"></div>';} ?>
+              <div class="col-xs-12 col-sm-4">
+                <figure>
+                  <div class="s-icon">
+                    <img src="<?php echo $val['serv_type_thumb'] ?>" alt="">
+                  </div>
+                  <figcaption>
+                    <h3><?php echo $val['serv_type_title'] ?></h3>
+                    <p><?php echo $val['serv_type_desc'] ?></p>
+                  </figcaption>
+                </figure>
+              </div>
+            <?php } ?>
+         
+          
+        </div>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="container titled">
+        <h1>我们历年的心血大作</h1>
+        <h3>OUR CASES</h3>
+        <div class="row">
+
+          <?php foreach($sloginfos as $val){ ?>
+          <div class="col-xs-12 col-sm-4 content">
+            <img src="<?php echo $val['case_thumb']; ?>" alt="">
+            <a href="showinfo.php?id=<?php echo $val['case_id']?>">
+              <div class="mask">
+                <h2><?php echo $val['case_name'] ?></h2>
+                <p><?php echo $val['case_desc'] ?></p>
+              </div>
+            </a>
+
+          </div>
+          <?php } ?>
+         
+        </div>
+        <a href=""><span>LEARN MORE</span></a>
+      </div>
+    </section>
+    <section class="history">
+      <div class="container titled">
+        <h1>我们的发展历程</h1>
+        <h3>OUR DEVELOPMENT HISTORY</h3>
+        <div class="row">
+
+          <?php foreach($soures as $val){ ?>
+          <div class="col-xs-12 col-sm-4 content">
+            <div class="img">
+              <img src="<?php echo $val['about_img'] ?>" alt="">
+            </div>
+            <h2><?php echo $val['about_title'] ?></h2>
+            <p><?php echo $val['about_content'] ?></p>
+          </div>
+         <?php }?>
+        </div>
+        <a href=""><span>LEARN MORE</span></a>
+      </div>
+    </section>
+   
+   
+    
